@@ -1,0 +1,135 @@
+@media only screen and (max-width: $xxlScreen){
+    .pos-rel-xxl{
+        position: relative !important;
+    }
+    .pos-abs-xxl{
+        position: absolute !important;
+    }
+    .pos-fix-xxl{
+        position: fixed !important;
+    }
+    .pos-sta-xxl{
+        position: static !important;
+    }
+    .pos-sti-xxl{
+        position: sticky !important;
+    }
+}
+@media only screen and (max-width: $xlScreen){
+    .pos-rel-xl{
+        position: relative !important;
+    }
+    .pos-abs-xl{
+        position: absolute !important;
+    }
+    .pos-fix-xl{
+        position: fixed !important;
+    }
+    .pos-sta-xl{
+        position: static !important;
+    }
+    .pos-sti-xl{
+        position: sticky !important;
+    }
+}
+@media only screen and (max-width: $lgScreen){
+    .pos-rel-lg{
+        position: relative !important;
+    }
+    .pos-abs-lg{
+        position: absolute !important;
+    }
+    .pos-fix-lg{
+        position: fixed !important;
+    }
+    .pos-sta-lg{
+        position: static !important;
+    }
+    .pos-sti-lg{
+        position: sticky !important;
+    }
+}
+@media only screen and (max-width: $mlScreen){
+    .pos-rel-ml{
+        position: relative !important;
+    }
+    .pos-abs-ml{
+        position: absolute !important;
+    }
+    .pos-fix-ml{
+        position: fixed !important;
+    }
+    .pos-sta-ml{
+        position: static !important;
+    }
+    .pos-sti-ml{
+        position: sticky !important;
+    }
+}
+@media only screen and (max-width: $mdScreen){
+    .pos-rel-md{
+        position: relative !important;
+    }
+    .pos-abs-md{
+        position: absolute !important;
+    }
+    .pos-fix-md{
+        position: fixed !important;
+    }
+    .pos-sta-md{
+        position: static !important;
+    }
+    .pos-sti-md{
+        position: sticky !important;
+    }
+}
+@media only screen and (max-width: $smScreen){
+    .pos-rel-sm{
+        position: relative !important;
+    }
+    .pos-abs-sm{
+        position: absolute !important;
+    }
+    .pos-fix-sm{
+        position: fixed !important;
+    }
+    .pos-sta-sm{
+        position: static !important;
+    }
+    .pos-sti-sm{
+        position: sticky !important;
+    }
+}
+@media only screen and (max-width: $xsScreen){
+    .pos-rel-xs{
+        position: relative !important;
+    }
+    .pos-abs-xs{
+        position: absolute !important;
+    }
+    .pos-fix-xs{
+        position: fixed !important;
+    }
+    .pos-sta-xs{
+        position: static !important;
+    }
+    .pos-sti-xs{
+        position: sticky !important;
+    }
+}
+.pos-abs{
+    position: absolute;
+}
+.pos-rel{
+    position: relative;
+}
+.pos-fix{
+    position: fixed;
+}
+.pos-sti{
+    position: sticky;
+}
+.pos-sta{
+    position: sticky;
+}
+

@@ -1,0 +1,77 @@
+$sizes: '-xxl', '-xl', '-lg', '-ml', '-md', '-sm', '-xs';
+$screenSize: $xxlScreen, $xlScreen, $lgScreen, $mlScreen, $mdScreen, $smScreen, $xsScreen;
+$directions: padding, padding-top, padding-right, padding-bottom, padding-left, (padding-left, padding-right), (padding-top, padding-bottom);
+$directionAb: '','t','r','b','l', 'x', 'y';
+$variants:
+    ('-uns'),
+    ('-ini'),
+    ('0', '1', '2', '3', '4', '5', '6');
+$variantValues:
+    (unset),
+    (initial),
+    (0, $size-1, $size-2, $size-3, $size-4, $size-5, $size-6);
+
+$count: 0;
+
+// For each direction (Top, Right, Bottom, Left)
+@each $direction in $directions{
+    // For each different variant (uns, ini, $size, %, rem, px)
+    @each $variant in $variants {
+        $currentDirectionIndex: index($directions, $direction);
+        $currentVariant: index($variants, $variant);
+        // For each different value (0, 1rem, 2rem, ...)
+        @each $value in $variant{
+            $currentValueList: nth($variantValues, $currentVariant);
+            $currentValueIndex: index($variant, $value);
+            $styleCount: length(nth($directions, $currentDirectionIndex));
+                    $valueToSet: nth($currentValueList, $currentValueIndex);
+                    $styles: nth($directions, $currentDirectionIndex);
+                    @if $styleCount > 1{
+                        .p#{nth($directionAb, $currentDirectionIndex)}#{$value}{
+                            #{nth($styles, 1)}: $valueToSet;
+                            #{nth($styles, 2)}: $valueToSet;
+                        }
+                    }
+                    @else{
+                        .p#{nth($directionAb, $currentDirectionIndex)}#{$value}{
+                            #{nth($styles, 1)}: $valueToSet;
+                        }
+                    }
+            $count:$count+1;
+        }
+    }
+}
+// For each screen size (xxl, xl, lg, ml, md, sm, xs)
+@each $size in $sizes{
+    @media only screen and (max-width: nth($screenSize,  index($sizes, $size))) {
+        // For each direction (Top, Right, Bottom, Left)
+        @each $direction in $directions{
+            // For each different variant (uns, ini, $size, %, rem, px)
+            @each $variant in $variants {
+                $currentDirectionIndex: index($directions, $direction);
+                $currentVariant: index($variants, $variant);
+                // For each different value (0, 1rem, 2rem, ...)
+                @each $value in $variant{
+                    $currentValueList: nth($variantValues, $currentVariant);
+                    $currentValueIndex: index($variant, $value);
+                    $styleCount: length(nth($directions, $currentDirectionIndex));
+                    $valueToSet: nth($currentValueList, $currentValueIndex);
+                    $styles: nth($directions, $currentDirectionIndex);
+                    @if $styleCount > 1{
+                        .p#{nth($directionAb, $currentDirectionIndex)}#{$value}#{$size}{
+                            #{nth($styles, 1)}: $valueToSet !important;
+                            #{nth($styles, 2)}: $valueToSet !important;
+                        }
+                    }
+                    @else{
+                        .p#{nth($directionAb, $currentDirectionIndex)}#{$value}#{$size}{
+                            #{nth($styles, 1)}: $valueToSet !important;
+                        }
+                    }
+                    $count:$count+1;
+                }
+            }
+        }
+    }
+}
+@debug "Added #{$count} padding classes";

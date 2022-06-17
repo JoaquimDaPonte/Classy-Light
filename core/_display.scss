@@ -1,0 +1,56 @@
+@media only screen and (max-width: $xxlScreen){
+    .dn-xxl{
+        display: none !important;
+    }
+    .dn-min-xxl{
+        display: none !important;
+    }
+}
+@media only screen and (max-width: $xlScreen){
+    .dn-xl{
+        display: none !important;
+    }
+    .dn-min-xl{
+        display: none !important;
+    }
+}@media only screen and (max-width: $lgScreen){
+    .dn-lg{
+        display: none !important;
+    }
+    .dn-min-lg{
+        display: none !important;
+    }
+}@media only screen and (max-width: $mlScreen){
+    .dn-ml{
+        display: none !important;
+    }
+    .dn-min-ml{
+        display: none !important;
+    }
+}@media only screen and (max-width: $mdScreen){
+    .dn-md{
+        display: none !important;
+    }
+    .dn-min-md{
+        display: none !important;
+    }
+}@media only screen and (max-width: $smScreen){
+    .dn-sm{
+        display: none !important;
+    }
+    .dn-min-sm{
+        display: none !important;
+    }
+}
+@media only screen and (max-width: $xsScreen){
+    .dn-xs{
+        display: none !important;
+    }
+    .dn-min-xs{
+        display: none !important;
+    }
+}
+
+.dn{
+    display: none !important;
+}
